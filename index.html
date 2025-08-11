@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Chosen Palette: Warm Neutrals with Muted Teal Accent -->
-    <!-- Application Structure Plan: The application uses a single-page, vertical-scroll layout with sticky navigation buttons ('Hari 1', 'Hari 2') for quick access to thematic sections. This structure was chosen over a simple table to create a more guided and engaging user flow. Each day is presented as a distinct section with an introductory paragraph for context, followed by a visually organized timeline. This approach transforms the static schedule into an interactive narrative. Donut charts are included to provide a quick, scannable summary of how time is allocated each day, enhancing comprehension at a glance. The header has been updated to include a key clarification about facilitators. -->
+    <!-- Chosen Palette: Warm Neutrals with Muted Teal and Indigo Accents -->
+    <!-- Application Structure Plan: The application uses a single-page, vertical-scroll layout with sticky navigation buttons ('Hari 1', 'Hari 2') for quick access to thematic sections. This structure was chosen over a simple table to create a more guided and engaging user flow. Each day is presented as a distinct section with an introductory paragraph for context, followed by a visually organized timeline. This approach transforms the static schedule into an interactive narrative. Donut charts are included to provide a quick, scannable summary of how time is allocated each day, enhancing comprehension at a glance. The header has been updated to include a key clarification about facilitators with a more prominent visual style, and icons have been replaced with professional symbols. To address repetitiveness, each timeline item now includes a brief, descriptive subtitle to make the content more distinct. -->
     <!-- Visualization & Content Choices: Report Info: Daily schedule -> Goal: Organize/Inform -> Viz/Method: Styled HTML timeline (Flexbox divs) -> Interaction: Scroll-to-section via nav buttons -> Justification: More visually appealing and responsive than a standard table. Report Info: Time allocation per day -> Goal: Compare/Inform -> Viz/Method: Donut Chart -> Interaction: Hover tooltips showing activity and duration -> Justification: Provides a quick visual summary of the day's focus (e.g., theory vs. practical). Library: Chart.js for canvas-based charts. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
@@ -30,7 +30,9 @@
         <header class="text-center mb-12">
             <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Bengkel Latihan Kemahiran Digital</h1>
             <p class="mt-2 text-lg text-gray-600">Guru RBT, ASK, SK serta Pegawai SISC+</p>
-            <p class="mt-4 text-sm text-red-600 font-semibold italic">Penceramah atau Fasilitator perlu disediakan oleh pihak PPD masing-masing.</p>
+            <div class="mt-6 bg-red-100 text-red-800 font-bold p-4 rounded-xl shadow-inner">
+                <p class="text-base sm:text-lg">Penceramah atau Fasilitator perlu disediakan oleh pihak PPD masing-masing.</p>
+            </div>
         </header>
 
         <nav class="sticky top-0 z-10 bg-white/80 backdrop-blur-md shadow-sm rounded-xl mb-12">
@@ -55,9 +57,9 @@
                                         <div class="relative pb-8">
                                             <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200 timeline-line"></span>
                                             <div class="relative flex space-x-3">
-                                                <div><span class="h-8 w-8 rounded-full bg-teal-500 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-sm">1</p></span></div>
+                                                <div><span class="h-8 w-8 rounded-full bg-teal-500 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-lg">✓</p></span></div>
                                                 <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
-                                                    <div><p class="text-sm text-gray-500">8:00 pagi - 9:00 pagi</p><p class="font-medium text-gray-900">Pendaftaran & Ucapan Aluan</p></div>
+                                                    <div><p class="text-sm text-gray-500">8:00 pagi - 9:00 pagi</p><p class="font-medium text-gray-900">Pendaftaran & Ucapan Aluan</p><p class="text-xs text-gray-400">Kehadiran, sarapan pagi, dan ucapan pembukaan.</p></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -66,9 +68,9 @@
                                         <div class="relative pb-8">
                                             <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200 timeline-line"></span>
                                             <div class="relative flex space-x-3">
-                                                <div><span class="h-8 w-8 rounded-full bg-teal-500 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-sm">2</p></span></div>
+                                                <div><span class="h-8 w-8 rounded-full bg-teal-500 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-lg">✓</p></span></div>
                                                 <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
-                                                    <div><p class="text-sm text-gray-500">9:00 pagi - 10:30 pagi</p><p class="font-medium text-gray-900">Ucapan Utama & Pengenalan Bengkel</p></div>
+                                                    <div><p class="text-sm text-gray-500">9:00 pagi - 10:30 pagi</p><p class="font-medium text-gray-900">Pengenalan KP 2027</p><p class="text-xs text-gray-400">Memahami hala tuju dan kurikulum baru untuk persediaan masa hadapan.</p></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -77,7 +79,7 @@
                                         <div class="relative pb-8">
                                             <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200 timeline-line"></span>
                                             <div class="relative flex space-x-3">
-                                                <div><span class="h-8 w-8 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-sm">☕</p></span></div>
+                                                <div><span class="h-8 w-8 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-lg">☕</p></span></div>
                                                 <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                                                     <div><p class="text-sm text-gray-500">10:30 pagi - 11:00 pagi</p><p class="font-medium text-gray-900">Rehat</p></div>
                                                 </div>
@@ -88,9 +90,9 @@
                                         <div class="relative pb-8">
                                             <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200 timeline-line"></span>
                                             <div class="relative flex space-x-3">
-                                                <div><span class="h-8 w-8 rounded-full bg-teal-500 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-sm">3</p></span></div>
+                                                <div><span class="h-8 w-8 rounded-full bg-teal-500 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-lg">✓</p></span></div>
                                                 <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
-                                                    <div><p class="text-sm text-gray-500">11:00 pagi - 1:00 petang</p><p class="font-medium text-gray-900">Slot 1: Pengenalan kepada Metaverse</p></div>
+                                                    <div><p class="text-sm text-gray-500">11:00 pagi - 1:00 petang</p><p class="font-medium text-gray-900">Slot 1: Pengenalan kepada Metaverse</p><p class="text-xs text-gray-400">Mempelajari konsep dan potensi Metaverse dalam PdP.</p></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -99,7 +101,7 @@
                                         <div class="relative pb-8">
                                             <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200 timeline-line"></span>
                                             <div class="relative flex space-x-3">
-                                                <div><span class="h-8 w-8 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-sm">🍴</p></span></div>
+                                                <div><span class="h-8 w-8 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-lg">🍴</p></span></div>
                                                 <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                                                     <div><p class="text-sm text-gray-500">1:00 petang - 2:30 petang</p><p class="font-medium text-gray-900">Makan Tengah Hari & Solat</p></div>
                                                 </div>
@@ -110,9 +112,9 @@
                                         <div class="relative pb-8">
                                              <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200 timeline-line"></span>
                                             <div class="relative flex space-x-3">
-                                                <div><span class="h-8 w-8 rounded-full bg-teal-500 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-sm">4</p></span></div>
+                                                <div><span class="h-8 w-8 rounded-full bg-teal-500 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-lg">✓</p></span></div>
                                                 <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
-                                                    <div><p class="text-sm text-gray-500">2:30 petang - 4:30 petang</p><p class="font-medium text-gray-900">Slot 2: Amali dan Aplikasi Metaverse</p></div>
+                                                    <div><p class="text-sm text-gray-500">2:30 petang - 4:30 petang</p><p class="font-medium text-gray-900">Slot 2: Amali dan Aplikasi Metaverse</p><p class="text-xs text-gray-400">Meneroka alat Metaverse seperti ruang maya dan alatan kolaborasi.</p></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -144,9 +146,9 @@
                                         <div class="relative pb-8">
                                             <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200 timeline-line"></span>
                                             <div class="relative flex space-x-3">
-                                                <div><span class="h-8 w-8 rounded-full bg-indigo-500 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-sm">5</p></span></div>
+                                                <div><span class="h-8 w-8 rounded-full bg-indigo-500 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-lg">✓</p></span></div>
                                                 <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
-                                                    <div><p class="text-sm text-gray-500">8:30 pagi - 9:00 pagi</p><p class="font-medium text-gray-900">Rumusan Hari Pertama</p></div>
+                                                    <div><p class="text-sm text-gray-500">8:30 pagi - 9:00 pagi</p><p class="font-medium text-gray-900">Rumusan Hari Pertama</p><p class="text-xs text-gray-400">Sesi ringkas untuk mengimbas kembali pembelajaran hari sebelumnya.</p></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -155,9 +157,9 @@
                                         <div class="relative pb-8">
                                             <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200 timeline-line"></span>
                                             <div class="relative flex space-x-3">
-                                                <div><span class="h-8 w-8 rounded-full bg-indigo-500 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-sm">6</p></span></div>
+                                                <div><span class="h-8 w-8 rounded-full bg-indigo-500 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-lg">✓</p></span></div>
                                                 <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
-                                                    <div><p class="text-sm text-gray-500">9:00 pagi - 10:30 pagi</p><p class="font-medium text-gray-900">Slot 3: Pengenalan kepada AI</p></div>
+                                                    <div><p class="text-sm text-gray-500">9:00 pagi - 10:30 pagi</p><p class="font-medium text-gray-900">Slot 3: Pengenalan kepada AI</p><p class="text-xs text-gray-400">Mengenali konsep AI, jenis-jenisnya, dan cara ia berfungsi.</p></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -166,7 +168,7 @@
                                         <div class="relative pb-8">
                                             <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200 timeline-line"></span>
                                             <div class="relative flex space-x-3">
-                                                <div><span class="h-8 w-8 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-sm">☕</p></span></div>
+                                                <div><span class="h-8 w-8 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-lg">☕</p></span></div>
                                                 <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                                                     <div><p class="text-sm text-gray-500">10:30 pagi - 11:00 pagi</p><p class="font-medium text-gray-900">Rehat</p></div>
                                                 </div>
@@ -177,9 +179,9 @@
                                         <div class="relative pb-8">
                                             <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200 timeline-line"></span>
                                             <div class="relative flex space-x-3">
-                                                <div><span class="h-8 w-8 rounded-full bg-indigo-500 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-sm">7</p></span></div>
+                                                <div><span class="h-8 w-8 rounded-full bg-indigo-500 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-lg">✓</p></span></div>
                                                 <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
-                                                    <div><p class="text-sm text-gray-500">11:00 pagi - 1:00 petang</p><p class="font-medium text-gray-900">Slot 4: Amali AI (NotebookLM & lain-lain)</p></div>
+                                                    <div><p class="text-sm text-gray-500">11:00 pagi - 1:00 petang</p><p class="font-medium text-gray-900">Slot 4: Amali AI (NotebookLM & lain-lain)</p><p class="text-xs text-gray-400">Pengalaman praktikal menggunakan NotebookLM, ChatGPT, dan lain-lain.</p></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -188,7 +190,7 @@
                                         <div class="relative pb-8">
                                             <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200 timeline-line"></span>
                                             <div class="relative flex space-x-3">
-                                                <div><span class="h-8 w-8 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-sm">🍴</p></span></div>
+                                                <div><span class="h-8 w-8 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-lg">🍴</p></span></div>
                                                 <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                                                     <div><p class="text-sm text-gray-500">1:00 petang - 2:30 petang</p><p class="font-medium text-gray-900">Makan Tengah Hari & Solat</p></div>
                                                 </div>
@@ -199,9 +201,9 @@
                                         <div class="relative pb-8">
                                             <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200 timeline-line"></span>
                                             <div class="relative flex space-x-3">
-                                                <div><span class="h-8 w-8 rounded-full bg-indigo-500 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-sm">8</p></span></div>
+                                                <div><span class="h-8 w-8 rounded-full bg-indigo-500 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-lg">✓</p></span></div>
                                                 <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
-                                                    <div><p class="text-sm text-gray-500">2:30 petang - 4:00 petang</p><p class="font-medium text-gray-900">Slot 5: Aplikasi AI dalam PdP</p></div>
+                                                    <div><p class="text-sm text-gray-500">2:30 petang - 4:00 petang</p><p class="font-medium text-gray-900">Slot 5: Aplikasi AI dalam PdP</p><p class="text-xs text-gray-400">Strategi mengintegrasikan alat AI dalam pengajaran dan pembelajaran.</p></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -209,7 +211,7 @@
                                      <li class="timeline-item">
                                         <div class="relative pb-8">
                                             <div class="relative flex space-x-3">
-                                                <div><span class="h-8 w-8 rounded-full bg-indigo-500 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-sm">✔</p></span></div>
+                                                <div><span class="h-8 w-8 rounded-full bg-indigo-500 flex items-center justify-center ring-8 ring-white"><p class="text-white font-bold text-lg">🏁</p></span></div>
                                                 <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                                                     <div><p class="text-sm text-gray-500">4:00 petang - 4:30 petang</p><p class="font-medium text-gray-900">Penutup & Sesi Bergambar</p></div>
                                                 </div>
@@ -238,78 +240,85 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const day1Ctx = document.getElementById('day1Chart').getContext('2d');
-            const day2Ctx = document.getElementById('day2Chart').getContext('2d');
+            const day1Canvas = document.getElementById('day1Chart');
+            const day2Canvas = document.getElementById('day2Chart');
 
-            const chartOptions = {
-                responsive: true,
-                maintainAspectRatio: false,
-                cutout: '70%',
-                plugins: {
-                    legend: {
-                        position: 'bottom',
-                        labels: {
-                            padding: 20,
-                            boxWidth: 12,
-                            font: {
-                                size: 12
+            if (day1Canvas && day2Canvas) {
+                const day1Ctx = day1Canvas.getContext('2d');
+                const day2Ctx = day2Canvas.getContext('2d');
+
+                const chartOptions = {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 20,
+                                boxWidth: 12,
+                                font: {
+                                    size: 12
+                                }
                             }
-                        }
-                    },
-                    tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                let label = context.label || '';
-                                if (label) {
-                                    label += ': ';
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed !== null) {
+                                        label += context.parsed + ' jam';
+                                    }
+                                    return label;
                                 }
-                                if (context.parsed !== null) {
-                                    label += context.parsed + ' jam';
-                                }
-                                return label;
                             }
                         }
                     }
-                }
-            };
+                };
 
-            new Chart(day1Ctx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Sesi Pembelajaran', 'Sesi Amali', 'Rehat & Pengenalan'],
-                    datasets: [{
-                        label: 'Pembahagian Masa Hari 1',
-                        data: [2, 2, 4], 
-                        backgroundColor: [
-                            '#14b8a6', // teal-500
-                            '#5eead4', // teal-300
-                            '#9ca3af'  // gray-400
-                        ],
-                        borderColor: '#f8fafc',
-                        borderWidth: 4
-                    }]
-                },
-                options: chartOptions
-            });
+                new Chart(day1Ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Sesi Pembelajaran', 'Sesi Amali', 'Rehat & Pengenalan'],
+                        datasets: [{
+                            label: 'Pembahagian Masa Hari 1',
+                            data: [2, 2, 4], 
+                            backgroundColor: [
+                                '#14b8a6', 
+                                '#5eead4', 
+                                '#9ca3af'  
+                            ],
+                            borderColor: '#f8fafc',
+                            borderWidth: 4
+                        }]
+                    },
+                    options: chartOptions
+                });
 
-            new Chart(day2Ctx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Sesi Pembelajaran', 'Sesi Amali', 'Rehat & Rumusan'],
-                    datasets: [{
-                        label: 'Pembahagian Masa Hari 2',
-                        data: [1.5, 3.5, 3], 
-                        backgroundColor: [
-                            '#6366f1', // indigo-500
-                            '#a5b4fc', // indigo-300
-                            '#9ca3af'  // gray-400
-                        ],
-                        borderColor: '#f8fafc',
-                        borderWidth: 4
-                    }]
-                },
-                options: chartOptions
-            });
+                new Chart(day2Ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Sesi Pembelajaran', 'Sesi Amali', 'Rehat & Rumusan'],
+                        datasets: [{
+                            label: 'Pembahagian Masa Hari 2',
+                            data: [1.5, 3.5, 3], 
+                            backgroundColor: [
+                                '#6366f1', 
+                                '#a5b4fc', 
+                                '#9ca3af'  
+                            ],
+                            borderColor: '#f8fafc',
+                            borderWidth: 4
+                        }]
+                    },
+                    options: chartOptions
+                });
+            } else {
+                console.error("Elemen kanvas tidak ditemui.");
+            }
         });
     </script>
 
